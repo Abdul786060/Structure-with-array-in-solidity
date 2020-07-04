@@ -1,0 +1,14 @@
+pragma solidity ^0.6.0;
+contract structure_with_array{
+    Person[] public people;
+    uint public PersonCount;
+    struct Person {
+        string firstName;
+        string lastName;
+    }
+    
+    function addPerson(string memory firstName, string memory lastName) public {
+        people.push(Person(firstName,lastName));
+        PersonCount +=1;
+    }
+}
